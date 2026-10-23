@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>প্রগতি মিশন চান্দাই মাঝপাড়া</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header>
+  <div class="top">মানবতার সেবায়, উন্নয়নের পথে</div>
+  <div class="brand">
+    <div class="logo">🤝</div>
+    <div>
+      <h1>প্রগতি মিশন চান্দাই মাঝপাড়া</h1>
+      <p>সেবা • শিক্ষা • সচেতনতা • উন্নয়ন</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#activities">কার্যক্রম</a>
+    <a href="#news">সংবাদ</a>
+    <a href="#gallery">গ্যালারি</a>
+    <a href="#accounts">হিসাব-নিকাশ</a>
+    <a href="#login">লগইন</a>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <h2>একসাথে গড়বো মানবিক সমাজ</h2>
+    <p>সমাজের প্রতিটি মানুষের পাশে, একটি উন্নত আগামী গড়ার লক্ষ্যে।</p>
+  </section>
+
+  <section id="activities" class="card">
+    <h2>🌱 আমাদের কার্যক্রম</h2>
+    <div class="grid">
+      <article>💚<h3>সমাজসেবা</h3><p>দুর্দশাগ্রস্ত মানুষের পাশে</p></article>
+      <article>📚<h3>শিক্ষা</h3><p>শিক্ষাসামগ্রী ও শিক্ষাসহায়তা</p></article>
+      <article>📢<h3>সচেতনতা</h3><p>সচেতন সমাজ গঠন</p></article>
+      <article>🤲<h3>আর্থিক সহায়তা</h3><p>সহযোগিতার হাত বাড়িয়ে দিই</p></article>
+      <article>⚽<h3>খেলাধুলা</h3><p>সম্প্রীতি ও সুস্থ বিনোদন</p></article>
+    </div>
+  </section>
+
+  <section id="news" class="card">
+    <h2>📰 সর্বশেষ সংবাদ</h2>
+    <p>এখানে সংগঠনের নতুন সংবাদ, কর্মসূচি ও ঘোষণা যোগ করুন।</p>
+  </section>
+
+  <section id="gallery" class="card">
+    <h2>📷 ছবি ও ভিডিও গ্যালারি</h2>
+    <p>নিজেদের কার্যক্রমের ছবি যোগ করতে নিচের নমুনা বদলান।</p>
+    <div class="grid">
+      <article><img src="photos/service.jpg" alt="সমাজসেবা"><p>সমাজসেবা</p></article>
+      <article><img src="photos/education.jpg" alt="শিক্ষা কার্যক্রম"><p>শিক্ষা কার্যক্রম</p></article>
+      <article><img src="photos/sports.jpg" alt="খেলাধুলা"><p>খেলাধুলা</p></article>
+    </div>
+    <p class="note">ছবিগুলো আপলোড না করলে ছবির জায়গায় ভাঙা ছবি দেখা যেতে পারে। নিজের ছবি আপলোড করে ফাইলের নাম মিলিয়ে দিন।</p>
+  </section>
+
+  <section id="accounts" class="card">
+    <h2>🧾 হিসাব-নিকাশ <small>সবার জন্য উন্মুক্ত</small></h2>
+    <div class="totals">
+      <div>মোট জমা<strong id="totalIn">৳ ০</strong></div>
+      <div>মোট খরচ<strong id="totalOut">৳ ০</strong></div>
+      <div>বর্তমান ব্যালেন্স<strong id="balance">৳ ০</strong></div>
+    </div>
+    <p id="accountStatus">হিসাব লোড হচ্ছে…</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>তারিখ</th><th>বিবরণ</th><th>ধরন</th><th>পরিমাণ</th></tr></thead>
+        <tbody id="transactions"><tr><td colspan="4">লোড হচ্ছে…</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="login" class="card">
+    <h2>🔐 অ্যাডমিন লগইন</h2>
+    <label for="email">ইমেইল</label>
+    <input id="email" type="email" autocomplete="username" placeholder="অ্যাডমিন ইমেইল">
+    <label for="password">পাসওয়ার্ড</label>
+    <input id="password" type="password" autocomplete="current-password" placeholder="পাসওয়ার্ড">
+    <button id="loginBtn">লগইন</button>
+    <button id="logoutBtn" hidden>লগআউট</button>
+    <p id="loginStatus" role="status"></p>
+
+    <div id="admin" hidden>
+      <h3>হিসাব অ্যাডমিন প্যানেল</h3>
+      <p id="roleStatus"></p>
+      <div id="adminForm" hidden>
+        <label for="txDate">তারিখ</label>
+        <input id="txDate" type="date">
+        <label for="txDesc">বিবরণ</label>
+        <input id="txDesc" maxlength="160" placeholder="যেমন: শিক্ষা উপকরণ বিতরণ">
+        <label for="txType">লেনদেনের ধরন</label>
+        <select id="txType">
+          <option value="income">জমা / আয়</option>
+          <option value="expense">খরচ</option>
+        </select>
+        <label for="txAmount">পরিমাণ (টাকা)</label>
+        <input id="txAmount" type="number" min="0.01" step="0.01" placeholder="যেমন: 5000">
+        <button id="saveTx">লেনদেন যোগ করুন</button>
+        <p id="adminStatus" role="status"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📣 নোটিশ বোর্ড</h2>
+    <p>সভা, কর্মসূচি, স্বেচ্ছাসেবক ও সদস্যদের জন্য ঘোষণা এখানে প্রকাশ করুন।</p>
+  </section>
+
+  <section class="card">
+    <h2>☎ যোগাযোগ</h2>
+    <p>প্রগতি মিশন চান্দাই মাঝপাড়া</p>
+    <p>এখানে প্রতিষ্ঠানের ফোন নম্বর, ঠিকানা ও সামাজিক যোগাযোগমাধ্যমের লিংক যোগ করুন।</p>
+  </section>
+</main>
+
+<footer>
+  <strong>প্রগতি মিশন চান্দাই মাঝপাড়া</strong>
+  <p>সেবা • শিক্ষা • সচেতনতা • উন্নয়ন</p>
+</footer>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
