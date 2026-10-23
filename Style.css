@@ -1,0 +1,53 @@
+
+*{box-sizing:border-box}
+body{margin:0;background:#f2f9f6;color:#173d32;font-family:Arial,"Noto Sans Bengali",sans-serif;line-height:1.6}
+.top{background:#004b3d;color:white;padding:8px 4%;font-size:13px}
+.brand{display:flex;align-items:center;gap:14px;padding:20px 4%;background:white}
+.logo{width:70px;height:70px;border:4px solid #12804e;border-radius:50%;display:grid;place-items:center;font-size:38px;flex-shrink:0}
+h1{font-size:clamp(21px,4vw,38px);line-height:1.3;color:#075943;margin:0}
+.brand p{color:#20744f;margin:5px 0}
+nav{background:#00684c;display:flex;flex-wrap:wrap;justify-content:center;position:sticky;top:0;z-index:5}
+nav a{color:white;text-decoration:none;padding:10px 12px;font-size:14px}
+nav a:hover{background:#098658}
+main{max-width:1100px;margin:18px auto;padding:0 12px}
+.hero{padding:45px 25px;border-radius:10px;color:white;background:linear-gradient(120deg,#07539a,#00754e,#004638);margin-bottom:15px}
+.hero h2{font-size:clamp(25px,5vw,42px);margin:0 0 8px}
+.hero p{margin:0}
+.card{background:white;border:1px solid #cfe5da;border-radius:9px;padding:16px;margin:14px 0;box-shadow:0 2px 6px #174a3510}
+.card h2{color:#086246;font-size:22px;margin:0 0 12px;border-bottom:1px solid #e0eee7;padding-bottom:8px}
+.card h2 small{font-size:12px;color:#08784f}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.grid article{padding:15px 10px;text-align:center;background:#f3faf6;border:1px solid #dcece3;border-radius:7px}
+.grid h3{font-size:16px;margin:5px 0}
+.grid p{font-size:13px;margin:4px 0}
+img{max-width:100%;height:125px;object-fit:cover;border-radius:6px}
+.totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.totals div{background:#dff5e7;padding:12px;border-radius:7px;font-size:13px}
+.totals div:nth-child(2){background:#ffe7e7}
+.totals div:nth-child(3){background:#e0efff}
+.totals strong{display:block;font-size:20px;overflow-wrap:anywhere}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:420px;font-size:13px}
+td,th{border:1px solid #d8e8e0;padding:9px;text-align:left}
+th{background:#e7f3ec}
+tr:nth-child(even){background:#f8fbf9}
+label{display:block;font-size:14px;font-weight:bold;margin:10px 0 4px}
+input,select{width:100%;padding:11px;border:1px solid #c6ddd2;border-radius:6px;font:inherit;background:white}
+button{width:100%;padding:12px;background:#07864d;color:white;border:0;border-radius:6px;font:inherit;font-weight:bold;margin-top:12px;cursor:pointer}
+button:hover{background:#006b42}
+button[hidden],[hidden]{display:none!important}
+.note,#accountStatus,#loginStatus,#roleStatus,#adminStatus{font-size:13px;color:#5c756b}
+footer{background:#004b3d;color:white;text-align:center;padding:25px 12px;margin-top:25px}
+footer p{margin:3px}
+@media(max-width:520px){
+ .brand{padding:14px 12px;gap:9px}
+ .logo{width:54px;height:54px;font-size:28px;border-width:3px}
+ .brand p{font-size:12px}
+ nav a{font-size:12px;padding:8px}
+ main{margin:10px auto;padding:0 9px}
+ .hero{padding:28px 17px}
+ .card{padding:12px}
+ .totals{grid-template-columns:1fr}
+ .totals div{display:flex;justify-content:space-between;align-items:center;gap:8px}
+ .totals strong{font-size:18px}
+}
