@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>প্রগতি মিশন চান্দাই মাঝপাড়া</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f2f5f7;color:#172b3a;line-height:1.6}
+header{background:#104b36;color:#fff;text-align:center;padding:22px 12px}header h1{font-size:clamp(22px,5vw,32px);margin:8px 0}
+.logo{width:85px;height:85px;object-fit:contain;border-radius:50%;background:#fff}
+nav{background:#063b68;display:flex;justify-content:center;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;padding:11px 12px;font-size:14px}nav a:hover{background:#147a53}
+.ticker{background:#f4cf58;padding:10px 14px;font-weight:bold}.container{max-width:1050px;margin:auto;padding:15px}
+.hero{background:linear-gradient(120deg,#0d6847,#07518b);color:white;padding:30px 20px;border-radius:12px;text-align:center}.hero h2{font-size:26px}
+button{border:0;background:#0e704a;color:white;padding:11px 15px;border-radius:7px;cursor:pointer;margin:4px}button:hover{opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.card{background:white;padding:17px;border-radius:10px;box-shadow:0 2px 8px #00000012;margin-bottom:12px}
+.card h3,.section-title{color:#116642}.section-title{border-left:5px solid #0b8053;padding-left:10px}
+.stat{font-size:23px;font-weight:bold;color:#087348}.small{font-size:13px;color:#62727b}
+input,textarea,select{width:100%;padding:11px;margin:7px 0;border:1px solid #ccd5db;border-radius:6px}
+.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;background:white}th,td{padding:10px;border:1px solid #dce3e8;text-align:left}th{background:#0e573e;color:white}
+footer{background:#103c30;color:white;text-align:center;padding:25px;margin-top:20px}
+</style>
+</head>
+<body>
+<header>
+  <img src="logo.jpg" class="logo" alt="প্রগতি মিশন লোগো" onerror="this.style.display='none'">
+  <h1>প্রগতি মিশন চান্দাই মাঝপাড়া</h1>
+  <p>সেবা • শিক্ষা • সচেতনতা • উন্নয়ন</p>
+</header>
+<nav>
+  <a href="#home">হোম</a><a href="#news">সর্বশেষ সংবাদ</a><a href="#activities">কার্যক্রম</a><a href="#gallery">গ্যালারি</a><a href="#accounts">হিসাব-নিকাশ</a><a href="#login">লগইন</a>
+</nav>
+<div class="ticker">📢 সংগঠনের খবর, কার্যক্রম ও আর্থিক বিবরণ এখানে দেখুন</div>
+<main class="container">
+<section id="home" class="hero">
+<h2>স্বাগতম প্রগতি মিশনে</h2><p>মানবসেবা, শিক্ষা ও সমাজের উন্নয়নে আমরা একসাথে।</p>
+<button onclick="document.getElementById('activities').scrollIntoView({behavior:'smooth'})">আমাদের কার্যক্রম</button>
+<button onclick="document.getElementById('accounts').scrollIntoView({behavior:'smooth'})">হিসাব দেখুন</button>
+</section>
+<section id="news"><h2 class="section-title">📰 সর্বশেষ সংবাদ</h2><div class="card"><h3>প্রগতি মিশনের সংবাদ ও বিজ্ঞপ্তি</h3><p>সংগঠনের নতুন কার্যক্রম, সভা, সামাজিক উদ্যোগ ও গুরুত্বপূর্ণ ঘোষণা এখানে প্রকাশিত হবে।</p></div></section>
+<section id="activities"><h2 class="section-title">🤝 আমাদের কার্যক্রম</h2><div class="grid">
+<div class="card"><h3>❤️ সমাজসেবা</h3><p>অসহায় মানুষের পাশে দাঁড়ানো ও মানবিক সহায়তা।</p></div>
+<div class="card"><h3>📚 শিক্ষা</h3><p>শিক্ষা ও জ্ঞানভিত্তিক উদ্যোগ।</p></div>
+<div class="card"><h3>📢 সচেতনতা</h3><p>সামাজিক সচেতনতা ও জনকল্যাণমূলক প্রচারণা।</p></div>
+<div class="card"><h3>💰 আর্থিক সহায়তা</h3><p>সহায়তা কার্যক্রম ও অনুদানের বিবরণ।</p></div>
+<div class="card"><h3>⚽ খেলাধুলা</h3><p>ফুটবল টুর্নামেন্ট ও বিনোদনমূলক আয়োজন।</p></div>
+<div class="card"><h3>🎉 বিনোদন</h3><p>সাংস্কৃতিক অনুষ্ঠান ও অন্যান্য কার্যক্রম।</p></div>
+</div></section>
+<section id="gallery"><h2 class="section-title">📸 ছবি ও ভিডিও গ্যালারি</h2><div class="grid">
+<div class="card">📷<h3>সমাজসেবা</h3><p>কার্যক্রমের ছবি এখানে যুক্ত হবে।</p></div>
+<div class="card">📷<h3>শিক্ষা ও সচেতনতা</h3><p>শিক্ষামূলক ছবির সংগ্রহ।</p></div>
+<div class="card">⚽<h3>খেলাধুলা</h3><p>টুর্নামেন্ট ও পুরস্কার বিতরণের ছবি।</p></div>
+</div></section>
+<section id="accounts"><h2 class="section-title">💰 উন্মুক্ত হিসাব-নিকাশ</h2><p>এই বিভাগটি সবার জন্য উন্মুক্ত। নিচের হিসাব প্রাথমিকভাবে শূন্য দেখানো হচ্ছে।</p>
+<div class="grid"><div class="card"><p>মোট জমা</p><div class="stat" id="income">৳০</div></div><div class="card"><p>মোট খরচ</p><div class="stat" id="expense">৳০</div></div><div class="card"><p>বর্তমান ব্যালেন্স</p><div class="stat" id="balance">৳০</div></div></div>
+<div class="card"><h3>লেনদেনের বিবরণ</h3><div class="table-wrap"><table><thead><tr><th>তারিখ</th><th>বিবরণ</th><th>ধরন</th><th>টাকা</th></tr></thead><tbody><tr><td colspan="4">এখনো কোনো হিসাব যোগ করা হয়নি।</td></tr></tbody></table></div><p class="small">এটি এখনো ডেমো ডিজাইন; হিসাব সংরক্ষণ ও সম্পাদনার জন্য নিরাপদ সার্ভার/ডেটাবেস যুক্ত করতে হবে।</p></div>
+</section>
+<section id="login"><h2 class="section-title">🔐 হিসাব পরিচালকের লগইন</h2><div class="card"><p>এটি শুধু নমুনা ফর্ম; বাস্তব লগইন এখনো যুক্ত নেই।</p>
+<label for="userid">ইউজার আইডি</label><input id="userid" autocomplete="username" placeholder="ইউজার আইডি">
+<label for="password">পাসওয়ার্ড</label><input id="password" type="password" autocomplete="current-password" placeholder="পাসওয়ার্ড">
+<button type="button" onclick="alert('এই ডেমো পেজে বাস্তব লগইন চালু নেই। নিরাপদ লগইনের জন্য ব্যাকএন্ড যুক্ত করতে হবে।')">লগইন</button>
+</div></section>
+</main>
+<footer><strong>প্রগতি মিশন চান্দাই মাঝপাড়া</strong><br>সেবা • শিক্ষা • সচেতনতা • উন্নয়ন</footer>
+</body>
+</html>
